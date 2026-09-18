@@ -7,14 +7,14 @@ threads = []
 def build_application(app):
     threads.append(app)
     print("Building application {}".format(app))
-    os.system("cd {} && gradle build -x test".format(app))
+    os.system("cd {} && ./gradlew build -x test".format(app))
     print("Application {} finished building!".format(app))
     threads.remove(app)
 
 
 def docker_compose_up():
     print("Running containers!")
-    os.popen("docker-compose up --build -d").read()
+    os.system("docker-compose up --build -d")
     print("Pipeline finished!")
 
 
