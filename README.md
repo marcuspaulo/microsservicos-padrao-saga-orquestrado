@@ -1,0 +1,1 @@
+docker compose up -d --build kafka redpanda-console order-db product-db inventory-db payment-db

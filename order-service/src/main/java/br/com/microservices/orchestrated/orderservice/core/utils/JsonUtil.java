@@ -23,9 +23,9 @@ public class JsonUtil {
         }
     }
 
-    public Event toEvent(Object object) {
+    public Event toEvent(String json) {
         try {
-            return objectMapper.readValue(objectMapper.writeValueAsString(object), Event.class);
+            return objectMapper.readValue(json, Event.class);
         } catch (JsonProcessingException e) {
             log.error(e.getMessage(), e);
             throw new RuntimeException(e);
