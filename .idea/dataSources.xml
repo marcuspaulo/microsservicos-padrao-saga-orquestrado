@@ -15,7 +15,7 @@
       <jdbc-url>jdbc:postgresql://localhost:5433/payment-db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="inventory-db" uuid="517cacce-5aa0-42fc-8818-2ef3010ed806">
+    <data-source source="LOCAL" name="inventory-db@localhost" uuid="517cacce-5aa0-42fc-8818-2ef3010ed806">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>

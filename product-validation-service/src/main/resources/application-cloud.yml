@@ -1,0 +1,15 @@
+# Perfil "cloud": infra (Postgres/Kafka) na VPS Contabo, acessada via túnel SSH
+# (ssh -N contabo-lab). Host/porta/Kafka vêm do application.yml (localhost).
+#
+# Ativar: variável SPRING_PROFILES_ACTIVE=cloud (ou "Active profiles: cloud" no IntelliJ).
+# Senhas: .env na raiz do repositório (ignorado pelo Git; modelo em .env.example).
+
+spring:
+  config:
+    # Lê o .env da pasta atual ou da pasta acima (raiz), conforme o IntelliJ execute.
+    import: "optional:file:.env[.properties],optional:file:../.env[.properties]"
+
+  datasource:
+    # Sem valor padrão: se o .env não for lido, o serviço falha ao subir
+    # em vez de tentar a senha antiga "postgres".
+    password: ${DB_PASSWORD}

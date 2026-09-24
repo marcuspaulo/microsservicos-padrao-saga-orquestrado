@@ -1,0 +1,36 @@
+# .gitignore da raiz. Cada serviço tem o seu próprio (build/, .gradle, IDE);
+# aqui fica o que vale para o repositório inteiro.
+
+### Segredos — NUNCA commitar ###
+# Senhas locais (VPS Contabo). Para compartilhar o formato, use .env.example.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+### Dados locais do docker-compose (volumes do Kafka etc.) ###
+data/
+
+### Build / Gradle na raiz ###
+.gradle/
+build/
+out/
+*.log
+
+### macOS ###
+.DS_Store
+._*
+
+### IntelliJ — arquivos pessoais (os de projeto em .idea/ seguem versionados) ###
+.idea/workspace.xml
+.idea/shelf/
+.idea/dataSources.local.xml
+.idea/dataSources/
+.idea/httpRequests/
+*.iws
+
+### VS Code ###
+.vscode/
