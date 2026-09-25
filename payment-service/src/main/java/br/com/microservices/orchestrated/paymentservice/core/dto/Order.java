@@ -1,6 +1,5 @@
 package br.com.microservices.orchestrated.paymentservice.core.dto;
 
-import br.com.microservices.orchestrated.orchestratorservice.core.dto.OrderProduct;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,7 +15,7 @@ import java.util.List;
 public class Order {
 
     private String id;
-    private List<OrderProduct> products;
+    private List<OrderProducts> products;
     private LocalDateTime createdAt;
     private String transactionId;
     private double totalAmount;
